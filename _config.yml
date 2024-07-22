@@ -37,7 +37,7 @@ sass:
 
 # Google Auth
 WA_KEY: 0000000000
-SITE_KEY: 6LfYmRUqAAAAAPN8kV1kzJULlI_YSSER8nGEjSJb
+SITE_KEY: 6LfYmRUqAAAAAKTcjpUrEoqQngoOtfSUMZfGUB0W
 API_KEY: AIzaSyDDYUQN0NsDWYoMSLV4To7JzBjlA0cdHQY
 AUTH_DOMAIN: xoilack-maxwin.firebaseapp.com
 DATABASE_URL: https://xoilack-maxwin-default-rtdb.firebaseio.com
