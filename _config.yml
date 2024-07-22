@@ -1,0 +1,61 @@
+#
+dev: nobody
+
+name: Demo Slot
+
+description: Slot demo gacor melatih pola permainan
+
+poster: /assets/images/dafftube.png
+
+avatar: /assets/images/logo_img.png
+
+iklanVideo: https://www.xnxx.com/embedframe/ubuhvlb115b
+
+disqus:
+
+google_analytics: G-MBYBX123VX
+
+url: https://maxwin493.servegame.com
+
+baseurl: ""
+
+permalink: /ID-id/:title
+
+version: v1.2.0
+
+kramdown:
+
+  input: GFM
+
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+
+    css_class: 'highlight'
+
+sass:
+  style: :expanded
+
+# Google Auth
+WA_KEY: 0000000000
+SITE_KEY: 6LdwSAMqAAAAAJNf2-neEbSjXLJyz6O2d3LF6Ifa
+API_KEY: AIzaSyDUdcJBi_Hq9MqAnpuTLw6V5PG0lH_LjII
+AUTH_DOMAIN: bb493bet.firebaseapp.com
+DATABASE_URL: https://bb493bet-default-rtdb.asia-southeast1.firebasedatabase.app
+PROJECT_ID: bb493bet
+STORAGE_BUCKET: bb493bet.appspot.com
+SENDER_ID: 440942965677
+APP_ID: 1:440942965677:web:ebb8e9d6cb8485c4bd2724
+MEASUREMENT_ID: G-DE7LW4W8KJ
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sass-converter
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

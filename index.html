@@ -1,0 +1,59 @@
+---
+layout: default
+permalink: /ID-id/home
+---
+
+<style>
+.page-load-status {
+  display: none;
+  padding-top: 20px;
+  border-top: 1px solid #DDD;
+  text-align: center;
+  color: #777;
+}
+</style>
+
+<div class="grid-container">
+  {% for item in site.data.slots %}
+	<ion-card class="border-card post">
+<ion-grid v-for="(item, index) in data" style="padding:0;">
+			<ion-row class="first-row">
+				<div class="company">
+					{{ item.title }}
+				</div>
+                <div class="img-linear"></div>
+				<div class="img" style="background-image:url({{item.cover}})" ></div>
+			</ion-row>
+	<ion-row>
+	
+<ion-col>
+  <ion-item lines="none">
+    <ion-avatar aria-hidden="true" slot="start">
+                <img class="logo" src="{{item.logo}})"/>
+					</ion-avatar>
+	
+                    <ion-buttons slot="end">
+                        <ion-button size="large" onclick="pageSlots{{forloop.index}}()">
+                            <ion-icon aria-hidden="true" color="success" slot="icon-only" name="play-circle"></ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+</ion-item>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-card>
+  {% endfor %}
+</div>
+<div class="page-load-status">
+  <div class="loader-ellips infinite-scroll-request">
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+  </div>
+  <p class="infinite-scroll-last">End of content</p>
+  <p class="infinite-scroll-error">No more pages to load</p>
+</div>
+<p style="margin:auto;width:fit-content;">
+<ion-button class="more-button">View more</ion-button>
+</p>

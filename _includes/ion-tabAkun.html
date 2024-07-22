@@ -1,0 +1,49 @@
+
+        <ion-tab tab="akun">
+          <ion-header translucent>
+            <ion-toolbar>
+              <ion-title>Akun</ion-title>
+            </ion-toolbar>
+          </ion-header>
+
+          <ion-content id="user-signed-in" fullscreen="true">
+                <ion-card class="loginPage" class="ion-padding">
+<ion-card-header>
+        <ion-avatar class="margin-center">
+          <img id="userImg" src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" ></img>
+        </ion-avatar>
+<ion-label>
+<h1 id="user-display-name" class="text-member">Name Member</h1>
+</ion-label>
+<ion-label>
+<h3 id="user-email" class="text-member">E-mail Member</h3>
+</ion-label>
+</ion-card-header>
+<ion-card-conten class="ion-padding">
+<ion-button expand="block" id="sign-out-button">Logout<ion-icon slot="end" name="log-out-outline"></ion-icon></ion-button>
+</ion-card-conten>
+</ion-card>
+          </ion-content>
+        </ion-tab>
+<style>
+.loginPage{max-width:450px;width:90%;margin:auto;height:350px;margin-top:6%;padding:10%}.btn-login{padding:10px 20px;margin:20px;border-radius:25px;border:none;box-shadow:0 0 10px -3px #333d;background-color:#3880ff;color:#fff;float:right}.btn-cancel{display:none;padding:10px 20px;margin:20px;border-radius:25px;border:none;box-shadow:0 0 10px -3px #333d;background-color:#eba844;color:#fff}.flex{display:flex;justify-content:space-between}.text-member{text-align:center;margin-top:20px!important;margin-bottom:20px!important}.margin-center,.text-center{margin:auto}@media screen and (max-width:747px){.loginPage{margin-top:25%;padding:5%}}
+</style>
+
+<script type="module">
+ const firebaseConfig = {
+ apiKey: "{{ site.API_KEY }}",
+ authDomain: "{{ site.AUTH_DOMAIN }}",
+ databaseURL: "{{ site.DATABASE_URL }}",
+ projectId: "{{ site.PROJECT_ID }}",
+ storageBucket: "{{ site.STORAGE_BUCKET }}",
+ messagingSenderId: "{{ site.SENDER_ID }}",
+ appId: "{{ site.APP_ID }}",
+ measurementId: "{{ site.MEASUREMENT_ID }}"
+ };firebase.initializeApp(firebaseConfig);const auth=firebase.auth();const userSignedOutDiv=document.getElementById('user-signed-out');const userSignedInDiv=document.getElementById('user-signed-in');const userDisplayName=document.getElementById('user-display-name');const userEmail=document.getElementById('user-email');const signOutButton=document.getElementById('sign-out-button');function toggleUI(){if(auth.currentUser){userDisplayName.textContent=auth.currentUser.displayName;userEmail.textContent=auth.currentUser.email}else{location.href="{{site.baseurl}}/"}
+if(firebase.auth().currentUser.photoURL){document.querySelector('#userImg').src=firebase.auth().currentUser.photoURL}}
+signOutButton.addEventListener('click',()=>{auth.signOut()});auth.onAuthStateChanged(user=>{toggleUI()})
+</script>
+        
+<script language="javascript">
+function check(form){if(form.userid.value=="myuserid"&&form.pswrd.value=="mypswrd"){window.open('{{site.baseurl}}/')}else{alert("Error Password or Username")}}
+</script>

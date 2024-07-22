@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    {% include ion-head.html %}
+    <script type="module">
+      import { popoverController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+      window.popoverController = popoverController;
+    </script>
+  </head>
+  <body>
+    <ion-app>
+      <ion-header translucent>
+        <ion-toolbar fullscreen>
+          <div style="padding-top:56.25%;position:relative;">
+<iframe id="fullscreen" src="{{page.movie}}" style="border:0;max-width:100%;position:absolute;top:0;left:0;height:100%;width:100%;" allowFullScreen="true" allow="encrypted-media" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture"></iframe>
+</div>
+<ion-item>
+  <ion-label><h2 color="dark">{{page.title}}</h2><p>{{page.actor}}</p></ion-label>
+<ion-buttons>
+<ion-button onclick="openFullscreen();">
+  <ion-icon slot="icon-only" name="open-outline"></ion-icon>
+</ion-buttons>
+</ion-button>
+</ion-item>
+<ion-item fullscreen>
+<ion-buttons>
+<ion-button onclick="backHome()">
+<ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+</ion-button>
+</ion-buttons>
+<div class="separator"></div>
+<ion-buttons>
+<ion-button>
+<ion-icon slot="icon-only" name="thumbs-up-outline"></ion-icon>
+</ion-button>
+</ion-buttons>
+<div class="separator"></div>
+<ion-buttons>
+<ion-button>
+<ion-icon slot="icon-only" name="thumbs-down-outline"></ion-icon>
+</ion-button>
+</ion-buttons>
+<div class="separator"></div>
+<ion-buttons>
+<ion-button id="trigger-chat">
+<ion-icon slot="icon-only" name="chatbox-outline"></ion-icon>
+</ion-button>
+</ion-buttons>
+<div class="separator"></div>
+<ion-buttons>
+<ion-button id="trigger-pop">
+<ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
+</ion-button>
+</ion-buttons>
+</ion-item>
+        </ion-toolbar>
+       </ion-header>
+      <ion-content fullscreen>
+      {{ content }}
+      </ion-content>
+<ion-modal trigger="trigger-chat" id="menuChat">
+<ion-modal-header collapse="fade" translucent="true">
+        <ion-toolbar>
+<ion-title>Komentar</ion-title>
+    <ion-buttons slot="end">
+      <ion-button onClick="dismissMe()">
+        <ion-icon color="danger" slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        </ion-toolbar>
+     </ion-modal-header>
+    <ion-content class="ion-padding">
+<img src="{{page.img}}" style="width:300px;display:block;margin:auto;"/>
+</ion-content>
+  </ion-modal>
+    </ion-app>
+    {% include analytics.html %}
+    {% include jsScript.html %}
+  </body>
+</html>

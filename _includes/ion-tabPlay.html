@@ -1,0 +1,36 @@
+
+        <ion-tab tab="plays">
+          <ion-header translucent>
+            <ion-toolbar>
+                {% include iframe.html %}
+            </ion-toolbar>
+        <ion-segment value="pragmatic">
+          <ion-segment-button class="tabsegment" value="pragmatic" onclick="openTaun(event, 'pragmatic')">
+            <ion-label>Pragmatic Play</ion-label>
+          </ion-segment-button>
+          <ion-segment-button class="tabsegment" value="pgsoft" onclick="openTaun(event, 'pgsoft')">
+            <ion-label>PGsoft</ion-label>
+          </ion-segment-button>
+          <ion-segment-button class="tabsegment" value="classic" onclick="openTaun(event, 'classic')">
+            <ion-label>Oldest</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+          </ion-header>
+<script language="javascript">
+function openTaun(evt,taunName){var i,segment,tabsegment;segment=document.getElementsByClassName("segment");for(i=0;i<segment.length;i++){segment[i].style.display="none"}
+tabsegment=document.getElementsByClassName("tabsegment");for(i=0;i<tabsegment.length;i++){tabsegment[i].className=tabsegment[i].className.replace(" active","")}
+document.getElementById(taunName).style.display="block";evt.currentTarget.className+=" active"}
+</script>
+<script>
+$(document).ready(function(){$(".btn-nonactive").click(function(){$("btn").hide()});$(".btn-active").click(function(){$("btn").show()})})
+</script>
+          <ion-content id="pragmatic" fullscreen="true" scroll-y="true" class="segment">
+    {% include pragmatic.html %}
+          </ion-content>
+          <ion-content id="pgsoft" fullscreen="true" scroll-y="true" class="segment" style="display:none">
+    {% include pgsoft.html %}
+          </ion-content>
+          <ion-content id="classic" fullscreen="true" scroll-y="true" class="segment" style="display:none">
+    {% include populer.html %}
+          </ion-content>
+        </ion-tab>

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "DAFFtube",
+  "background_color": "#fff",
+  "theme_color": "#212121",
+  "start_url": "/",
+  "display": "standalone",
+  "description": "Nonton Film Streaming",
+  "icons": [{
+    "src": "/assets/favicon/maskable_icon.png",
+    "sizes":"any",
+    "type": "image/png",
+    "purpose": "any maskable"
+    },
+    {
+    "src": "/assets/favicon/maskable_icon_x512.png",
+    "sizes":"512x512",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }]
+}

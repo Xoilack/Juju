@@ -1,0 +1,44 @@
+
+        {% for post in site.data.populer %}
+        <ion-item>
+            <ion-avatar slot="start">
+              <img src="{{post.img}}" />
+            </ion-avatar>
+            <ion-label>
+              <h3 color="dark">{{post.title}}</h3>
+              <p>{{post.categories}}</p>
+            </ion-label>
+<ion-buttons class="btn-active">
+<ion-button color="danger" href="javascript: history.back()" onclick="playMe19{{forloop.index}}(false)" id="stopBtn19{{forloop.index}}" style="display:none">
+  <ion-icon slot="start" name="stop"></ion-icon>
+  <ion-label>Stop</ion-label>
+</ion-button>
+</ion-buttons>
+<btn>
+<ion-buttons class="btn-nonactive">
+<ion-button color="success" href="{{post.movie}}" target="iframe" onclick="playMe19{{forloop.index}}(true)" id="playBtn19{{forloop.index}}">
+  <ion-icon slot="start" name="play"></ion-icon>
+  <ion-label>Play</ion-label>
+</ion-button>
+</ion-buttons>
+</btn>
+</ion-item>
+<script language="javascript">
+function playMe19{{forloop.index}}(play){var playBtn19{{forloop.index}}=document.getElementById('playBtn19{{forloop.index}}')
+var stopBtn19{{forloop.index}}=document.getElementById('stopBtn19{{forloop.index}}')
+var marq=document.getElementById('marq')
+if(play){stopBtn19{{forloop.index}}.style.display="block"
+playBtn19{{forloop.index}}.style.display="none"
+marq.style.display="block"}else{playBtn19{{forloop.index}}.style.display="none"
+stopBtn19{{forloop.index}}.style.display="block"
+marq.style.display="none"}}
+function playMe19{{forloop.index}}(play){var playBtn19{{forloop.index}}=document.getElementById('playBtn19{{forloop.index}}')
+var stopBtn19{{forloop.index}}=document.getElementById('stopBtn19{{forloop.index}}')
+var marq=document.getElementById('marq')
+if(play){stopBtn19{{forloop.index}}.style.display="block"
+playBtn19{{forloop.index}}.style.display="none"
+marq.style.display="none"}else{stopBtn19{{forloop.index}}.style.display="none"
+playBtn19{{forloop.index}}.style.display="block"
+marq.style.display="block"}}
+</script>
+        {% endfor %}

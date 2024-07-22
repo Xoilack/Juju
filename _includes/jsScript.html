@@ -1,0 +1,55 @@
+<script src="{{ site.baseurl }}/assets/js/dark.js"></script>
+<script src="https://unpkg.com/infinite-scroll@4.0.1/dist/infinite-scroll.pkgd.min.js"></script>
+            {% for item in site.data.slots %}
+<script>
+function pageSlots{{forloop.index}}(){location.replace("{{site.baseurl}}{{item.url}}")}
+function backHome(){location.replace("{{site.baseurl}}/ID-id/home")}
+</script>
+            {% endfor %}
+            {% if page.url contains '/ID-id/' %}
+<script type="text/javascript">
+var elem=document.getElementById("fullscreen");function openFullscreen(){if(elem.requestFullscreen){elem.requestFullscreen()}else if(elem.webkitRequestFullscreen){elem.webkitRequestFullscreen()}else if(elem.msRequestFullscreen){elem.msRequestFullscreen()}}
+</script>
+<script>
+const sheetModalChat=document.querySelector('#menuChat');const appChat=document.querySelector('ion-app');sheetModalChat.breakpoints=[0.0,0.7,0.7];sheetModalChat.initialBreakpoint=0.7;async function dismissMe(){await sheetModalChat.dismiss({'dismissed':!0})}
+
+
+//-------------------------------------//
+// init Infinite Scroll
+
+$('.grid-container').infiniteScroll({
+  path: '.pagination__next',
+  append: '.post',
+  button: '.more-button',
+  // using button, disable loading on scroll 
+  scrollThreshold: false,
+  status: '.page-load-status',
+});
+
+//-------------------------------------//
+
+</script>
+            {% endif %}
+            
+{% if page.url contains '/404' %}
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/styled-components/3.2.1/styled-components.min.js'></script>
+            <script  src="{{ site.baseurl }}/js/404.js"></script>
+{% endif %}
+
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('{{ site.baseurl }}/sw.js')})}
+</script>
+<script>
+var myVar;
+
+function myLoader() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("spining").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>

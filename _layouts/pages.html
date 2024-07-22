@@ -1,0 +1,20 @@
+---
+permalink: /ID-id/home
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include ion-head.html %}
+    <script type="module">
+      import { popoverController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+      window.popoverController = popoverController;
+    </script>
+  </head>
+  <body>
+    <ion-app>
+    {{ content }}
+    </ion-app>
+    {% include analytics.html %}
+    {% include jsScript.html %}
+  </body>
+</html>

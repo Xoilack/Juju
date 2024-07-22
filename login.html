@@ -1,0 +1,94 @@
+---
+layout : none
+permalink : /
+---
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    {% include ion-head.html %}
+  </head>
+  <body onload="myLoader()">
+<ion-app>
+	
+	<ion-content>
+<ion-card class="loginPage" class="ion-padding">
+<ion-card-header>
+        <ion-avatar class="margin-center">
+          <img src="https://img.freepik.com/free-icon/google_318-278809.jpg" ></img>
+        </ion-avatar>
+<ion-label>
+<h1 class="text-login">Sign In</h1>
+</ion-label>
+<ion-label>
+<h3 class="text-kecil">Gunakan akun google anda untuk melanjutkan.</h3>
+</ion-label>
+</ion-card-header>
+<ion-card-conten class="ion-padding">
+	<p></p>
+	<p id="demo"></p>
+<ion-button expand="block" id="sign-in-button" style="display:block;"> Sign In</ion-button>
+</ion-card-conten>
+	<ion-progress-bar class="preloader" id="loader"></ion-progress-bar>
+</ion-card>
+	</ion-content>
+    
+</ion-app>
+<div class="g-recaptcha"
+      data-sitekey="{{ site.SITE_KEY }}"
+      data-callback="sign-in-button"
+      data-size="invisible">
+</div>
+  </body>
+<style>
+	.loginPage{max-width:450px;width:90%;margin:auto;height:350px;margin-top:6%;padding:10%}.text-login{text-align:center;margin-top:20px!important;margin-bottom:20px!important}.margin-center,.text-center{margin:auto}@media screen and (max-width:747px){.loginPage{margin-top:25%;padding:5%}}.margin-center{margin:auto;}.text-kecil{text-align:center;}
+</style>
+ <script>
+   grecaptcha.execute();
+ </script>
+
+<script>
+  let buffer = 0.06;
+  let progress = 0;
+
+  let progressBar = document.querySelector('ion-progress-bar');
+  progressBar.buffer = buffer;
+
+  setInterval(() => {
+    progressBar.buffer = buffer += 0.06;
+    progressBar.value = progress += 0.06;
+
+    // Reset the progress bar when it reaches 100%
+    // to continuously show the demo
+    if (progress > 1) {
+      setTimeout(() => {
+        progressBar.buffer = buffer = 0.06;
+        progressBar.value = progress = 0;
+      }, 1000);
+    }
+  }, 1000);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "";
+}
+</script>
+<script>
+    //after window is loaded completely 
+    window.onload = function(){
+        //hide the preloader
+        document.querySelector(".preloader").style.display = "none";
+    }
+</script>
+<script type="module">
+    const firebaseConfig = {
+    apiKey: "{{ site.API_KEY }}",
+    authDomain: "{{ site.AUTH_DOMAIN }}",
+    databaseURL: "{{ site.DATABASE_URL }}",
+    projectId: "{{ site.PROJECT_ID }}",
+    storageBucket: "{{ site.STORAGE_BUCKET }}",
+    messagingSenderId: "{{ site.SENDER_ID }}",
+    appId: "{{ site.APP_ID }}",
+    measurementId: "{{ site.MEASUREMENT_ID }}"
+    };firebase.initializeApp(firebaseConfig);const auth=firebase.auth();const userSignedInDiv=document.getElementById('user-signed-in');const signInButton=document.getElementById('sign-in-button');function toggleUI(){if(auth.currentUser){location.href="{{site.baseurl}}/ID-id/home"}else{}}
+	signInButton.addEventListener('click',()=>{const provider=new firebase.auth.GoogleAuthProvider();auth.signInWithPopup(provider)});auth.onAuthStateChanged(user=>{toggleUI()})
+</script>
+<script src="{{ site.baseurl }}/assets/js/dark.js"></script>
