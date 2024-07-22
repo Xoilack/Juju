@@ -38,14 +38,14 @@ sass:
 # Google Auth
 WA_KEY: 0000000000
 SITE_KEY: 6LdwSAMqAAAAAJNf2-neEbSjXLJyz6O2d3LF6Ifa
-API_KEY: AIzaSyDUdcJBi_Hq9MqAnpuTLw6V5PG0lH_LjII
-AUTH_DOMAIN: bb493bet.firebaseapp.com
-DATABASE_URL: https://bb493bet-default-rtdb.asia-southeast1.firebasedatabase.app
-PROJECT_ID: bb493bet
-STORAGE_BUCKET: bb493bet.appspot.com
-SENDER_ID: 440942965677
-APP_ID: 1:440942965677:web:ebb8e9d6cb8485c4bd2724
-MEASUREMENT_ID: G-DE7LW4W8KJ
+API_KEY: AIzaSyDDYUQN0NsDWYoMSLV4To7JzBjlA0cdHQY
+AUTH_DOMAIN: xoilack-maxwin.firebaseapp.com
+DATABASE_URL: https://xoilack-maxwin-default-rtdb.firebaseio.com
+PROJECT_ID: xoilack-maxwin
+STORAGE_BUCKET: xoilack-maxwin.appspot.com
+SENDER_ID: 996735481902
+APP_ID: 1:996735481902:web:79ab0ffb9a58db1d4e07bf
+MEASUREMENT_ID: G-ZNRMZ2QVVZ
 
 plugins:
   - jekyll-sitemap
