@@ -1,0 +1,28 @@
+{
+	"Users": [
+		{
+			"Login": "Chumnoy",
+			"Password": "r45LvGYdLM63ZAUn",
+			"Servers": [1,2,3,4,5],
+			"Function_Ban": true,
+			"Function_Unban": true,
+			"Function_GetBanInfo": true,
+			"Function_ResetTop": true,
+			"Function_ResetEconomy": true,
+			"Function_Logs_Functions": true,
+			"Function_Logs_Auth": true
+		},
+		{
+			"Login": "Administrator_0",
+			"Password": "r45LvGYdLM63ZAUn",
+			"Servers": [1,2,3,4,5],
+			"Function_Ban": true,
+			"Function_Unban": true,
+			"Function_GetBanInfo": true,
+			"Function_ResetTop": true,
+			"Function_ResetEconomy": true,
+			"Function_Logs_Functions": true,
+			"Function_Logs_Auth": true
+		}
+	]
+}

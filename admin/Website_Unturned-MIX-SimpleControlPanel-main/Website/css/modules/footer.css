@@ -1,0 +1,26 @@
+.footer {
+    background: var(--color-0);
+    border-top: 0.1em solid var(--color-9);
+    border-bottom: 0.1em solid var(--color-9);
+    margin-bottom: 10em;
+}
+.footer > .brand {
+	margin: 2em auto 2em auto;
+}
+.footer > .brand > img {
+	width: 14em;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.footer > .brand > .text {
+	margin-left: auto;
+	margin-right: auto;
+    width: max-content;
+    text-align: center;
+}
+.footer > .brand > .text > h4 {
+	color: var(--color-4);
+    font-size: 1em;
+    margin: unset;
+}

@@ -1,0 +1,32 @@
+{
+	"1": {
+		"DBAddress": "Address",
+		"DBUsername": "Username",
+		"DBName": "DataBase Name",
+		"DBPassword": "Password"
+	},
+	"2": {
+		"DBAddress": "Address",
+		"DBUsername": "Username",
+		"DBName": "DataBase Name",
+		"DBPassword": "Password"
+	},
+	"3": {
+		"DBAddress": "Address",
+		"DBUsername": "Username",
+		"DBName": "DataBase Name",
+		"DBPassword": "Password"
+	},
+	"4": {
+		"DBAddress": "Address",
+		"DBUsername": "Username",
+		"DBName": "DataBase Name",
+		"DBPassword": "Password"
+	},
+	"5": {
+		"DBAddress": "Address",
+		"DBUsername": "Username",
+		"DBName": "DataBase Name",
+		"DBPassword": "Password"
+	}
+}

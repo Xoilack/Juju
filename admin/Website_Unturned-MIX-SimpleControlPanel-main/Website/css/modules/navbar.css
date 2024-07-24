@@ -1,0 +1,314 @@
+.container-fluid.navbar {
+	z-index: 100;
+}
+.navbar {
+	user-select: none;
+	transition: 0.2s;
+	background: var(--color-30);
+    border-bottom: 0.1em solid var(--color-9);
+}
+.navbar, .navbar > .container {
+	height: 5.2em;
+	position: sticky;
+	top: 0;
+}
+.navbar > .container.default > .brand, .navbar > .container.default > .brand > .logo {
+	height: 100%;
+}
+.navbar > .container.default > .brand > .logo {
+	height: 100%;
+	padding: 3%;
+	display: inline-block;
+}
+.navbar > .container.default > .brand > .logo > img {
+	height: 100%;
+	transition: 0.3s;
+}
+.navbar > .container.default > .brand > .logo > img:hover {
+	transform: scale(0.98);
+}
+.navbar > .container.default > .btns {
+	height: 100%;
+	margin-right: 1em;
+}
+.navbar > .container.default > .btns > .btn {
+	height: 100%;
+	background: unset;
+	border: unset;
+	color: var(--color-1);
+	transition: 0.3s;
+	font-weight: bold;
+	font-size: 1.3em;
+	text-shadow: var(--text-shadow-0);
+	float: left;
+	position: relative;
+	padding: unset;
+    margin-left: 1.2em;
+}
+.navbar > .container.default > .btns > .btn:hover {
+	color: var(--color-2);
+}
+.navbar > .container.default > .btns > .btn > label {
+	float: left;
+	margin: 0 0.1em 0 0.1em;
+}
+.navbar > .container.default > .btns > .btn > .arrow-down-1 {
+	width: 0.6em;
+	height: 0.6em;
+	border-bottom: 0.3em solid var(--color-2);
+	border-right: 0.3em solid var(--color-2);
+	float: left;
+	border-radius: 0.1em;
+	transform: rotate(-45deg);
+	transition: 0.3s;
+	margin: 0.2em;
+	opacity: 0;
+}
+.navbar > .container.default > .btns > .btn:hover .arrow-down-1 {
+	transform: rotate(45deg);
+	opacity: 1;
+}
+.navbar > .container.default > .btns > .btn > .arrow-down-2 {
+	width: 0.6em;
+	height: 0.6em;
+	border-bottom: 0.3em solid var(--color-2);
+	border-left: 0.3em solid var(--color-2);
+	float: left;
+	border-radius: 0.1em;
+	transform: rotate(45deg);
+	transition: 0.3s;
+	margin: 0.2em;
+	opacity: 0;
+}
+.navbar > .container.default > .btns > .btn:hover .arrow-down-2 {
+	transform: rotate(-45deg);
+	opacity: 1;
+}
+.navbar > .container.default > .btns > .btn:hover ul {
+    height: auto;
+    opacity: 1;
+    margin: 2em 0 0 0;
+    border-bottom: 0.1em solid var(--color-9);
+    border-right: 0.1em solid var(--color-9);
+    border-left: 0.1em solid var(--color-9);
+}
+.navbar > .container.default > .btns > .btn ul li a {
+	font-size: 0.70em;
+	color: var(--color-1);
+	display: block;
+	transition: 0.3s;
+	line-height: 3em;
+	width: 100%;
+}
+.navbar > .container.default > .btns > .btn ul li a:hover {
+	color: var(--color-2);
+}
+.dropdown-menu {
+	position: absolute;
+	width: 100%;
+}
+.dropdown-menu ul {
+	position: relative;
+	margin: 3em 0 0 0;
+	padding: unset;
+	list-style: none;
+	overflow: hidden;
+	height: 0;
+	transition: 0.3s;
+	opacity: 0;
+	background: var(--color-0);
+}
+.navbar > .container.default > .btns > .btn > .dropdown-menu > ul {
+    background: var(--color-30);
+    border-radius: 0 0 0.3em 0.3em;
+}
+.navbar > .container.default > .btns > .btn ul li a:hover:before {
+	left: -0.95em;
+	opacity: 1;
+}
+.navbar > .container.default > .btns > .btn ul li a:before {
+	content: "";
+	width: 0.5em;
+	height: 0.5em;
+	border-bottom: 0.3em solid var(--color-2);
+	border-right: 0.3em solid var(--color-2);
+	position: absolute;
+	left: -1.4em;
+	transform: rotate(-45deg);
+	margin: 1.2em;
+	transition: 0.3s;
+	opacity: 0;
+}
+.navbar > .container.default > .btns > .btn ul li a:hover:after {
+	right: -0.95em;
+	opacity: 1;
+}
+.navbar > .container.default > .btns > .btn ul li a:after {
+	content: "";
+	width: 0.5em;
+	height: 0.5em;
+	border-bottom: 0.3em solid var(--color-2);
+	border-left: 0.3em solid var(--color-2);
+	position: absolute;
+	right: -1.4em;
+	transform: rotate(45deg);
+	margin: 1.2em;
+	transition: 0.3s;
+	opacity: 0;
+}
+.container.collapsed-menu {
+	top: 0;
+	right: 0;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	background: var(--color-10);
+	display: none;
+}
+#collapsed-menu-btn {
+	width: 100%;
+	height: 100%;
+	font-size: 2em;
+	background-color: unset;
+	border: unset;
+	color: var(--color-1);
+	text-shadow: var(--text-shadow-0);
+	font-weight: bold;
+	transition: 0.3s;
+}
+#collapsed-menu-btn:hover {
+	color: var(--color-2);
+}
+@media (max-width: 576px) {
+	.navbar > .container.default {
+		display: none;
+	}
+	.navbar > .container.collapsed-menu {
+		display: block;
+	}
+}
+#collapsed-menu-block {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	background: linear-gradient(180deg, var(--color-14), var(--color-15));
+	height: 100%;
+	font-size: 3em;
+	transition: 0.3s;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+}
+#collapsed-menu-block > .buttons > ul > li {
+	list-style: none;
+	margin-bottom: 1em;
+}
+#collapsed-menu-block > .buttons > ul > li > label, #collapsed-menu-block > .buttons > ul > li > label > a {
+	color: var(--color-1);
+}
+#collapsed-menu-block > .buttons > ul > li > ul {
+	margin-top: 0.3em;
+}
+#collapsed-menu-block > .buttons > ul > li > ul > li {
+	color: var(--color-16);
+	list-style: none;
+}
+#collapsed-menu-block > .buttons > ul > li > ul > li > a {
+	color: var(--color-16);
+	transition: 0.3s;
+	position: relative;
+}
+#collapsed-menu-block > .buttons > ul > li > ul > li > a:hover {
+	color: var(--color-2);
+}
+#collapsed-menu-block > .buttons > ul {
+	padding: unset;
+}
+#collapsed-menu-block > .buttons {
+	text-align: left;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 50vh;
+	overflow: auto;
+}
+.collapsed-menu-header h1 {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: var(--color-2);
+	text-shadow: var(--text-shadow-0);
+	margin-bottom: 1em;
+}
+#collapsed-menu-btn-close {
+	width: 4em;
+	height: 4em;
+	background: var(--color-10);
+	border: 0.1em solid;
+	border-color: var(--color-4);
+	border-radius: 1em;
+	margin-top: 2em;
+	padding: unset;
+	position: relative;
+	transition: 0.3s;
+	box-shadow: 0 0 1em var(--color-15);
+}
+#collapsed-menu-btn-close:hover {
+	transform: scale(0.90);
+	box-shadow: unset;
+}
+#collapsed-menu-btn-close:after, #collapsed-menu-btn-close:before  {
+	content: "";
+	background: var(--color-4);
+	width: 10%;
+	height: 80%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	left: 0;
+	position: absolute;
+	margin: auto;
+	transition: 0.2s;
+}
+#collapsed-menu-btn-close:after {
+	transform: rotate(45deg);
+}
+#collapsed-menu-btn-close:before {
+	transform: rotate(-45deg);
+}
+#collapsed-menu-btn-close:hover:after, #collapsed-menu-btn-close:hover:before {
+	background: var(--color-2);
+}
+#collapsed-menu-btn-close:hover {
+	border-color: var(--color-2);
+}
+.collapsed-menu-hr {
+	height: 0.1em;
+	width: 95%;
+	border: unset;
+	background: linear-gradient(90deg, transparent, var(--color-9), transparent);
+}
+#collapsed-menu-block > .buttons > ul > li > ul > li > a:before {
+	content: "";
+	width: 0.45em;
+	height: 0.45em;
+	position: absolute;
+	transform: rotate(45deg);
+	border-top: 0.15em solid var(--color-2);
+	border-right: 0.15em solid var(--color-2);
+	left: -2em;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	transition: 0.3s;
+	opacity: 0;
+}
+#collapsed-menu-block > .buttons > ul > li > ul > li > a:hover:before {
+	left: -0.8em;
+	opacity: 1;
+}
+.logout-panel {
+	display: none;
+}
